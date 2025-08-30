@@ -1,0 +1,91 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #0f0f0f; /* match BootScreen bg */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.boot-screen {
+  background: black;
+  color: #888888;
+  font-family: "Courier New", monospace;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.logs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.log-line {
+  white-space: pre-wrap;
+}
+
+/* color codes */
+.ok {
+  color: #dddddd;
+}
+.warn {
+  color: #ffcc00;
+}
+.error {
+  color: #ff3333;
+}
+.info {
+  color: #d8d8d8;
+}
+.debug {
+  color: #8888ff;
+}
+.hack {
+  color: #ff00ff;
+}
+
+/* blinking cursor */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background: #33ff33;
+  margin-left: 4px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* make logs start at bottom */
+.scrolling-logs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+/* center the final log */
+.final-log {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #33ff33;
+  font-family: "Courier New", monospace;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
