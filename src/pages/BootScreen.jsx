@@ -1,97 +1,40 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./BootScreen.css";
 
 const fakeLogs = [
-  "theFolio v1.2.4 initializing...",
-  "[ OK ] Mounted /dev/nvme0n1p2 on / with ext4 filesystem",
-  "[ OK ] Loading kernel modules: nftables, overlayfs, kvm_intel, wireguard...",
-  "[ INFO ] Detected 16 CPU cores @ 3.40GHz",
-  "[ INFO ] Allocating 64,214 MB of system memory...",
-  "",
-  "[ OK ] Network stack initialized successfully",
-  "[ WARN ] DNS resolution took too long (timeout=5000ms)",
-  "[ OK ] Resolving host: github.com... 140.82.112.4",
-  ">>> Injecting custom payload into memory space...",
-  "[ INFO ] Key exchange complete. Session encrypted with AES-256-GCM.",
-  "[ ERROR ] Packet loss detected. Retrying handshake...",
-  "[ OK ] Handshake stabilized. Connection secured.",
-  "",
-  "[ OK ] Starting process: ./zaki_portfolio_engine --force --debug",
-  "[ LOG ] Loading modules [ ui.jsx | animations.js | tailwind.config.js ]",
-  "[ LOG ] Module 'tailwind.config.js' took 4221ms to compile ⚡",
-  "[ HACK ] Bypassing API rate limits... success.",
-  "[ LOG ] Injecting cinematic sequence at 0x004AF32...",
-  "[ LOG ] Drinking GUAVA JUICE for maximum confidence...",
-  "[ INFO ] Memory leak ignored (¯\\_(ツ)_/¯)",
-  "",
+  "theFolio v2.0.7 initializing...",
+  "[ OK ] Mounted /dev/nvme0n1p2 on / with ext4 filesystem (rw,noatime,data=ordered)",
+  "[ OK ] Kernel modules loaded: nftables, overlayfs, kvm_intel, wireguard, zram, bpf",
+  "[ INFO ] CPU topology: 16 cores / 32 threads @ 3.40GHz (Turbo Boost enabled)",
+  "[ INFO ] Memory allocation: 64,214 MB physical, 8,192 MB swap, 2,048 MB zram",
+  "[ INFO ] GPU detected: NVIDIA RTX 4080 (Driver v535.98)",
+  "[ INFO ] Initializing Vulkan shaders for UI rendering...",
+  "[ OK ] Network stack initialized (IPv4 + IPv6 dual stack)",
+  "[ WARN ] DNS resolution latency: 5123ms (threshold: 5000ms)",
+  "[ OK ] Host resolved: github.com → 140.82.112.4 via DNS-over-HTTPS",
+  "[ INFO ] Establishing secure tunnel: TLSv1.3 → AES-256-GCM → ECDHE-X25519",
+  "[ ERROR ] Packet loss detected on interface eth0 (7.2%) — retrying handshake...",
+  "[ OK ] Handshake stabilized. Session encrypted. Fingerprint: SHA256:9f:2a:7b:...",
+  "[ DEBUG ] Running pre-flight checks on ./zaki_portfolio_engine --force --debug",
+  "[ LOG ] Loading modules: [ ui.jsx | animations.js | tailwind.config.js | theme-dark.css ]",
+  "[ LOG ] Module 'tailwind.config.js' compiled in 4221ms ⚡ (no warnings)",
+  "[ HACK ] Injecting payload into memory space at 0x004AF32... success.",
+  "[ INFO ] Memory leak detected in animations.js → ignored (¯\\_(ツ)_/¯)",
   "[ OK ] SSH Tunnel established (localhost:2222 → 192.168.0.42:22)",
-  "[ OK ] Fetching secret project files from /etc/portfolio/zaki...",
-  "[ DATA ] Found 42 vulnerabilities... just kidding.",
-  "[ DEBUG ] User ‘zaki’ authenticated with admin privileges.",
-  "",
-  "██████████████████████████████████████████████████████████████████████",
+  "[ OK ] Fetching encrypted assets from /etc/portfolio/zaki/assets.enc",
+  "[ DATA ] Decrypted 13,842 files (total size: 2.4GB) using RSA-4096 private key",
+  "[ DEBUG ] User ‘watcher’ authenticated with viewer privileges (UID=0)",
+  "[ INFO ] Running vulnerability scan on local modules...",
+  "[ INFO ] Scan complete: 0 critical | 3 moderate | 42 humorous",
   "[ HAX ] Downloading cat memes archive (13GB)... ETA: never",
   "[ PRANK ] printf('hello world') → System crash (jk it’s fine)",
-  "██████████████████████████████████████████████████████████████████████",
-  "",
+  "[ LOG ] Drinking GUAVA JUICE for maximum confidence...",
   "[ OK ] Portfolio Engine Boot Sequence Started",
   "[ LOADING ] Rendering UI components → <HomePage /> <Projects /> <Contact />",
   "[ INFO ] Attaching shaders for smooth animations...",
-  "[ OK ] Deploying cinematic intro..."
+  "[ OK ] Ready. Welcome back, the1.",
+  "[ OK ] Deploying folio..."
 ];
-
-// final log is separated so we can fade it in centered
-const finalLog = "[ OK ] Ready. Welcome back, the1.";
-
-export default function BootScreen({ onFinish }) {
-  const [visibleLogs, setVisibleLogs] = useState([]);
-  const [showFinal, setShowFinal] = useState(false);
-
-  useEffect(() => {
-    let index = 0;
-
-    const addLog = () => {
-      if (index >= fakeLogs.length) {
-        // wait 1.5s, then show final log in center
-        setTimeout(() => {
-          setShowFinal(true);
-          setTimeout(onFinish, 2000); // trigger after showing final log
-        }, 1500);
-        return;
-      }
-
-      setVisibleLogs((prev) => [...prev, fakeLogs[index]]);
-      index++;
-
-      const delay = Math.floor(Math.random() * 1000) + 150;
-      setTimeout(addLog, delay);
-    };
-
-    addLog();
-  }, [onFinish]);
-
-  return (
-    <div className="boot-screen">
-      {/* logs scroll upward from bottom */}
-      <div className="scrolling-logs">
-        {visibleLogs.map((log, idx) => (
-          <pre key={idx} className={`log-line ${getLogClass(log)}`}>
-            {log}
-          </pre>
-        ))}
-        {!showFinal && <span className="cursor" />}
-      </div>
-
-      {/* final centered log */}
-      {showFinal && (
-        <div className="final-log">
-          <pre className="log-line ok">{finalLog}</pre>
-          <span className="cursor" />
-        </div>
-      )}
-    </div>
-  );
-}
 
 function getLogClass(log) {
   if (log.includes("[ OK ]")) return "ok";
@@ -101,4 +44,66 @@ function getLogClass(log) {
   if (log.includes("[ DEBUG ]")) return "debug";
   if (log.includes("[ HACK ]") || log.includes("[ HAX ]")) return "hack";
   return "";
+}
+
+export default function BootScreen({ onFinish }) {
+  const [visibleElements, setVisibleElements] = useState([]);
+  const [scrollStopped, setScrollStopped] = useState(false);
+  const logSet = useRef(new Set());
+  const index = useRef(0);
+  const groupCounter = useRef(0);
+  const groupSize = useRef(getRandomGroupSize());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (index.current >= fakeLogs.length) {
+        clearInterval(interval);
+        setTimeout(onFinish, 2000);
+        return;
+      }
+
+      const log = fakeLogs[index.current];
+
+      if (!logSet.current.has(log)) {
+        logSet.current.add(log);
+        setVisibleElements((prev) => [...prev, { type: "log", content: log }]);
+        groupCounter.current++;
+      }
+
+      index.current++;
+
+      if (groupCounter.current >= groupSize.current) {
+        setVisibleElements((prev) => [...prev, { type: "gap" }]);
+        groupCounter.current = 0;
+        groupSize.current = getRandomGroupSize();
+      }
+
+      if (log === "[ OK ] Ready. Welcome back, the1.") {
+        setScrollStopped(true);
+      }
+    }, 120);
+
+    return () => clearInterval(interval);
+  }, [onFinish]);
+
+  return (
+    <div className="boot-screen">
+      <div className={`scrolling-logs ${scrollStopped ? "paused" : ""}`}>
+        {visibleElements.map((el, idx) =>
+          el.type === "log" ? (
+            <pre key={idx} className={`log-line ${getLogClass(el.content)}`}>
+              {el.content}
+            </pre>
+          ) : (
+            <div key={idx} className="log-gap" />
+          )
+        )}
+        <span className="cursor" />
+      </div>
+    </div>
+  );
+}
+
+function getRandomGroupSize() {
+  return Math.floor(Math.random() * 4) + 4;
 }

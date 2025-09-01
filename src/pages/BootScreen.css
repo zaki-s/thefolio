@@ -1,91 +1,91 @@
-
 body, html {
   margin: 0;
   padding: 0;
-  background: #0f0f0f; /* match BootScreen bg */
+  background: #0f0f0f;
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-
 .boot-screen {
-  background: black;
-  color: #888888;
-  font-family: "Courier New", monospace;
+  background-color: #0f0f0f;
+  color: silver;
+  font-family: 'Courier New', Courier, monospace;
   height: 100vh;
   padding: 20px;
-  overflow-y: auto;
-}
-
-.logs-container {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: flex-end;
+  animation: fadeIn 1s ease-in;
+}
+
+.scrolling-logs {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  animation: scrollUp 60s linear infinite;
+  padding-right: 10px;
+  scrollbar-width: none;
+}
+
+.scrolling-logs.paused {
+  animation-play-state: paused;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 .log-line {
   white-space: pre-wrap;
+  line-height: 1.4;
+  animation: typeIn 0.3s ease-out;
+  color: silver;
+  margin-bottom: 4px;
 }
 
-/* color codes */
-.ok {
-  color: #dddddd;
-}
-.warn {
-  color: #ffcc00;
-}
-.error {
-  color: #ff3333;
-}
-.info {
-  color: #d8d8d8;
-}
-.debug {
-  color: #8888ff;
-}
-.hack {
-  color: #ff00ff;
+.log-gap {
+  height: 24px;
 }
 
-/* blinking cursor */
 .cursor {
   display: inline-block;
   width: 10px;
-  height: 18px;
-  background: #33ff33;
-  margin-left: 4px;
-  animation: blink 1s steps(2, start) infinite;
+  height: 20px;
+  background-color: silver;
+  animation: blink 1s step-end infinite;
+  margin-left: 5px;
+}
+
+.final-log {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: silver;
+}
+
+/* Remove individual log type colors */
+.ok, .warn, .error, .info, .debug, .hack {
+  color: silver;
 }
 
 @keyframes blink {
-  to {
-    visibility: hidden;
-  }
+  50% { opacity: 0; }
 }
 
-/* make logs start at bottom */
-.scrolling-logs {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-}
-
-/* center the final log */
-.final-log {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #33ff33;
-  font-family: "Courier New", monospace;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
+@keyframes typeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
