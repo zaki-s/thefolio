@@ -1,5 +1,6 @@
  
 .navbar {
+    margin-top: 0.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,7 +9,7 @@
 
 .title {
     font-family: "Asimovian", sans-serif;
-    color: white;
+    color: #04af98;
     font-size: 1.5rem;
     margin-left: 1rem;
 }
@@ -29,20 +30,35 @@
     cursor: pointer;
 }
 
+.links a:hover {
+    color: #08f1d2;
+    transition: 0.3s;
+}
+
 .links .roman {
-    color: #066155;
+    color: #04af98;
 }
 
 .navbtn {
     background-color: #0F172A;
-    color: #066155;
-    border: 1px solid #066155;
+    color: #04af98;
+    border: 1px solid #04af98;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
 }
 
+.navbtn:hover {
+    background-color: #04af9836;
+    transition: 0.3s;
+}
+
 .navbtn .navbtntxt {
-    color: #066155
+    color: #1ebda8;
+}
+
+.navbtn .navbtntxt:hover {
+    color: #ffffff;
+    transition: 0.3s;
 }
