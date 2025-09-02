@@ -1,14 +1,14 @@
 body, html {
   margin: 0;
   padding: 0;
-  background: #0f0f0f;
+  background: #0F172A;
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
 .boot-screen {
-  background-color: #0f0f0f;
+  background-color: #0F172A;
   color: silver;
   font-family: 'Courier New', Courier, monospace;
   height: 100vh;
