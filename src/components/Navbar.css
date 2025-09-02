@@ -17,15 +17,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     margin-right: 1rem;
 }
 
 .links a {
-    color: #066155;
+    font-family: 'Source Code Pro', monospace;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.links .roman {
+    color: #066155;
 }
 
 .navbtn {
@@ -36,4 +41,8 @@
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
+}
+
+.navbtn .navbtntxt {
+    color: #066155
 }
