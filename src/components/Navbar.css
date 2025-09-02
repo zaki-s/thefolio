@@ -12,6 +12,12 @@
     color: #04af98;
     font-size: 1.5rem;
     margin-left: 1rem;
+    cursor: none;
+}
+
+.title:hover {
+    color: #08f1d2;
+    transition: 0.3s;
 }
 
 .links {
