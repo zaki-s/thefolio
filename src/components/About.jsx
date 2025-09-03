@@ -1,6 +1,7 @@
 
 
 import React from 'react'
+import Tilt from 'react-parallax-tilt'
 import "./About.css"
 
 const About = () => {
@@ -14,9 +15,11 @@ const About = () => {
             <p>and creating digital experiences. I also love the whole essence</p>
             <p>of creating, in ay aspect! And i love comics and cars!!</p>
         </div>
+        <Tilt glareEnable={true} glareMaxOpacity={0.45} scale={1.05} transitionSpeed={2500}>
         <div className="abtfoto">
-            
+          <img src="../assets/images/the1.png" alt="Zaki" />
         </div>
+      </Tilt>
     </div>
   )
 }

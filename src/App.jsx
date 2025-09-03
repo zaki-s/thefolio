@@ -8,6 +8,7 @@ import Main from "./pages/Main";
 import Edu from "./components/Edu";
 import Proj from "./components/Proj";
 import Cont from "./components/Cont";
+import TiltedCard from "./components/TiltedCard";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/e" element={<Edu />} />
         <Route path="/p" element={<Proj />} />
         <Route path="/c" element={<Cont />} />
+        <Route path="/t" element={<TiltedCard />} />
       </Routes>
     </Router>
   )
