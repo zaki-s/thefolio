@@ -1,3 +1,144 @@
 
 
 
+.abtcont {
+  margin: 0 14rem ;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  gap: -4rem; 
+  padding: 2rem;
+}
+
+.abttext {
+  flex: 1;
+}
+
+.abttext h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5.1rem;
+  margin-bottom: -1rem;
+  font-weight: 700;
+  color: #e6f1ff;
+  margin: 0;
+}
+
+.abttext h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.1rem;
+  font-weight: 700;
+  color: #8892b0; 
+  margin: -2rem 0 1.5rem 0;
+}
+
+.abttext h3 {
+  font-family: 'Source Code Pro', monospace;
+  color: #64ffda;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-bottom: -1rem;
+}
+
+.abttext p {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #8892b0;
+  max-width: 600px;
+}
+
+.abttext {
+  max-width: 700px;
+  color: #ccd6f6; /* light bluish gray */
+}
+
+
+.abttext a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+/*yap section, relax*/
+.abtyap {
+  margin: 6rem 14rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.abtech {
+  flex: 1;
+  position: relative;
+  min-height: 400px; /* space for icons to float */
+}
+
+.abtech h3 {
+  font-family: 'Source Code Pro', monospace;
+  color: #64ffda;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.tech-icons {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tech-icons .icon {
+  position: absolute;
+  font-size: 2.5rem;
+  color: #8892b0;
+  opacity: 0.85;
+  animation: floatChaos 8s infinite ease-in-out;
+}
+
+/* Hover effect */
+.tech-icons .icon:hover {
+  color: #64ffda;
+  transform: scale(1.2);
+}
+
+/* Floating animation */
+@keyframes floatChaos {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(-30px, 20px) rotate(10deg); }
+  50%  { transform: translate(25px, -25px) rotate(-10deg); }
+  75%  { transform: translate(-20px, -15px) rotate(8deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Give each icon a random start position + delay */
+.icon.html     { top: 10%; left: 15%; animation-delay: 0s; }
+.icon.css      { top: 30%; left: 5%;  animation-delay: 1s; }
+.icon.js       { top: 50%; left: 20%; animation-delay: 2s; }
+.icon.react    { top: 70%; left: 10%; animation-delay: 0.5s; }
+.icon.tailwind { top: 20%; left: 40%; animation-delay: 1.5s; }
+.icon.node     { top: 60%; left: 35%; animation-delay: 2.5s; }
+.icon.python   { top: 40%; left: 55%; animation-delay: 3s; }
+.icon.java     { top: 15%; left: 70%; animation-delay: 0.7s; }
+.icon.postgres { top: 55%; left: 75%; animation-delay: 2.2s; }
+.icon.github   { top: 75%; left: 60%; animation-delay: 1.8s; }
+
+/* Right-side yap text */
+.yap {
+  flex: 1;
+  max-width: 600px;
+}
+
+.yap p {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #8892b0;
+  margin-bottom: 1rem;
+}
+
+.yap p:first-child {
+  font-size: 1.1rem;
+  color: #ccd6f6;
+}
