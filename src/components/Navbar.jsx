@@ -1,24 +1,75 @@
-
-
 import React from 'react'
-import "./Navbar.css" 
+import { motion } from 'framer-motion'
+import "./Navbar.css"
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-        <h1 className="title">the1</h1>
-        <div className="links">
-            <a href="#aboutme" className="alinks"><span className="roman">01.</span> About</a>
-            <a href="#projects" className="alinks"><span className="roman">02.</span> Education/Experience</a>
-            <a href="#contact" className="alinks"><span className="roman">03.</span> Projects</a>
-            <a href="#contact" className="alinks"><span className="roman">04.</span> Contact</a>
-            <a href="/resume.pdf" download="Zaki's Resume.pdf" className="navbtn">
-                <span className="navbtntxt">Resume</span>
-            </a>
-        </div>
+    <motion.div 
+      className="navbar"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      {/* Title */}
+      <motion.h1 className="title" variants={titleVariant}>
+        the1
+      </motion.h1>
 
-    </div>
+      {/* Links */}
+      <motion.div className="links" variants={linksContainer}>
+        <motion.a href="#aboutme" className="alinks" variants={linkVariant}>
+          <span className="roman">01.</span> About
+        </motion.a>
+        <motion.a href="#projects" className="alinks" variants={linkVariant}>
+          <span className="roman">02.</span> Education/Experience
+        </motion.a>
+        <motion.a href="#contact" className="alinks" variants={linkVariant}>
+          <span className="roman">03.</span> Projects
+        </motion.a>
+        <motion.a href="#contact" className="alinks" variants={linkVariant}>
+          <span className="roman">04.</span> Contact
+        </motion.a>
+        <motion.a 
+          href="/resume.pdf" 
+          download="Zaki's Resume.pdf" 
+          className="navbtn"
+          variants={linkVariant}
+        >
+          <span className="navbtntxt">Resume</span>
+        </motion.a>
+      </motion.div>
+    </motion.div>
   )
 }
 
-export default Navbar;
+export default Navbar
+
+// Animation Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    }
+  }
+}
+
+const titleVariant = {
+  hidden: { x: -60, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }
+}
+
+const linksContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+}
+
+const linkVariant = {
+  hidden: { x: -40, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } }
+}
