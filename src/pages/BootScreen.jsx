@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./BootScreen.css";
 
 const fakeLogs = [
@@ -54,11 +55,15 @@ export default function BootScreen({ onFinish }) {
   const groupCounter = useRef(0);
   const groupSize = useRef(getRandomGroupSize());
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (index.current >= fakeLogs.length) {
         clearInterval(interval);
-        setTimeout(onFinish, 2000);
+        setTimeout(() => {
+          navigate("/m", { replace: true });
+        }, 2000);
         return;
       }
 

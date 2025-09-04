@@ -10,6 +10,11 @@ import Proj from "./components/Proj";
 import Cont from "./components/Cont";
 import TiltedCard from "./components/TiltedCard";
 
+function BootScreenWrapper() {
+  const Navigate = useNavigate();
+  return <BootScreen onFinish={() => Navigate("/m")} />;
+}
+
 const App = () => {
   return (
     <Router>
