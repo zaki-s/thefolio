@@ -2,8 +2,24 @@
 
 import React from 'react'
 import Tilt from 'react-parallax-tilt'
-import { FaReact, FaNodeJs, FaPython, FaJava, FaHtml5, FaCss3Alt, FaGithub } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss, SiPostgresql, SiFlask } from "react-icons/si";
+import { 
+  FaReact, 
+  FaNodeJs, 
+  FaPython, 
+  FaHtml5, 
+  FaCss3Alt, 
+  FaGithub, 
+  FaInstagram, 
+  FaLinkedin, 
+  FaTwitter, 
+  FaDiscord 
+} from "react-icons/fa";
+import { 
+  SiJavascript, 
+  SiTailwindcss, 
+  SiPostgresql, 
+  SiFlask 
+} from "react-icons/si";
 import TiltedCard from './TiltedCard'
 import the1 from '../assets/images/the1.jpg'
 import "./About.css"
@@ -55,6 +71,27 @@ const About = () => {
             <SiPostgresql className="icon postgres" />
             <FaGithub className="icon github" />
           </div>
+
+  <div className="abtsocials">
+    <h3>Find me on:</h3>
+    <div className="social-icons">
+      <a href="https://github.com/zaki-s" target="_blank" rel="">
+        <FaGithub className="icon github" />
+      </a>
+      <a href="https://instagram.com/_zaki_s" target="_blank" rel="">
+        <FaInstagram className="icon insta" />
+      </a>
+      <a href="https://www.linkedin.com/in/zaki-james/" target="_blank" rel="">
+        <FaLinkedin className="icon linkedin" />
+      </a>
+      <a href="https://x.com/_jzaki_s?t=nJTIOLvBXdzJefSsoNe0Yw&s=09" target="_blank" rel="">
+        <FaTwitter className="icon twitter" />
+      </a>
+      <a href="https://discord.com/users/_zaki_s" target="_blank" rel="">
+        <FaDiscord className="icon discord" />
+      </a>
+    </div>
+  </div>
       </div>
       
       <div className="yap">

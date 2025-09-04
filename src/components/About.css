@@ -51,7 +51,7 @@
 
 .abttext {
   max-width: 700px;
-  color: #ccd6f6; /* light bluish gray */
+  color: #ccd6f6;
 }
 
 
@@ -72,7 +72,7 @@
 .abtech {
   flex: 1;
   position: relative;
-  min-height: 400px; /* space for icons to float */
+  min-height: 400px; 
 }
 
 .abtech h3 {
@@ -112,7 +112,7 @@
   100% { transform: translate(0, 0) rotate(0deg); }
 }
 
-/* Give each icon a random start position + delay */
+/* random ahh floating in the yard */
 .icon.html     { top: 10%; left: 15%; animation-delay: 0s; }
 .icon.css      { top: 30%; left: 5%;  animation-delay: 1s; }
 .icon.js       { top: 50%; left: 20%; animation-delay: 2s; }
@@ -142,3 +142,45 @@
   font-size: 1.1rem;
   color: #ccd6f6;
 }
+
+/* Random ahh icons */
+.abtsocials {
+  margin-top: 9rem; 
+  position: relative;
+  min-height: 150px; 
+}
+
+.abtsocials h3 {
+  font-family: 'Source Code Pro', monospace;
+  color: #64ffda;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.social-icons .icon {
+  position: absolute;
+  font-size: 2.5rem; 
+  color: #8892b0;
+  opacity: 0.85;
+  animation: floatChaos 8s infinite ease-in-out; 
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect same as tech */
+.social-icons .icon:hover {
+  color: #64ffda;
+  transform: scale(1.2);
+}
+
+/* Place socials randomly in yard */
+.social-icons .github   { top: 10%; left: 20%; animation-delay: 0s; }
+.social-icons .insta    { top: 40%; left: 10%; animation-delay: 1s; }
+.social-icons .linkedin { top: 30%; left: 45%; animation-delay: 2s; }
+.social-icons .twitter  { top: 60%; left: 30%; animation-delay: 3s; }
+.social-icons .discord  { top: 50%; left: 65%; animation-delay: 4s; }
