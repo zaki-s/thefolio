@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import About from '../components/About'
+import Cont from '../components/Cont'
 import "./Main.css"
 
 const Main = () => {
@@ -10,7 +11,7 @@ const Main = () => {
         <Navbar />
         <About />
 
-
+        <Cont />
     </div>
   )
 }

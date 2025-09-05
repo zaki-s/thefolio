@@ -1,0 +1,103 @@
+.contcont {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Section title */
+.contitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* Info texts */
+.coninfo,
+.coninfo2 {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;   /* tighter spacing */
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Button wrapper */
+.contbtn {
+  margin: 1.2rem 0 2rem;  
+}
+
+/* Get in touch button */
+.contact-btn {
+  display: inline-block;
+  background-color: #0F172A;
+  border: 1px solid #04af98;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1rem;
+  color: #04af98;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #04af9836;
+  color: #ffffff;
+}
+
+.btn-glow {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #08f1d2 0%, transparent 70%);
+  opacity: 0.1;
+  transform: rotate(45deg);
+  transition: opacity 0.3s ease;
+}
+
+.contact-btn:hover::before {
+  opacity: 0.3;
+}
+
+/* Footer */
+.footer {
+  margin-top: 2rem;
+  padding: 0.5rem 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: center;
+}
+
+.footxt {
+  margin: 0;
+  font-family: 'Source Code Pro', monospace;
+  letter-spacing: 0.5px;
+}
+
+.footxt a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.footxt a:hover {
+  color: #04af98;
+}
