@@ -72,26 +72,26 @@ const About = () => {
             <FaGithub className="icon github" />
           </div>
 
-  <div className="abtsocials">
-    <h3>Find me on:</h3>
-    <div className="social-icons">
-      <a href="https://github.com/zaki-s" target="_blank" rel="">
-        <FaGithub className="icon github" />
-      </a>
-      <a href="https://instagram.com/_zaki_s" target="_blank" rel="">
-        <FaInstagram className="icon insta" />
-      </a>
-      <a href="https://www.linkedin.com/in/zaki-james/" target="_blank" rel="">
-        <FaLinkedin className="icon linkedin" />
-      </a>
-      <a href="https://x.com/_jzaki_s?t=nJTIOLvBXdzJefSsoNe0Yw&s=09" target="_blank" rel="">
-        <FaTwitter className="icon twitter" />
-      </a>
-      <a href="https://discord.com/users/_zaki_s" target="_blank" rel="">
-        <FaDiscord className="icon discord" />
-      </a>
-    </div>
-  </div>
+          <div className="abtsocials">
+            <h3>Find me on:</h3>
+            <div className="social-icons">
+              <a href="https://github.com/zaki-s" target="_blank" rel="">
+                <FaGithub className="icon github" />
+              </a>
+              <a href="https://instagram.com/_zaki_s" target="_blank" rel="">
+                <FaInstagram className="icon insta" />
+              </a>
+              <a href="https://www.linkedin.com/in/zaki-james/" target="_blank" rel="">
+                <FaLinkedin className="icon linkedin" />
+              </a>
+              <a href="https://x.com/_jzaki_s?t=nJTIOLvBXdzJefSsoNe0Yw&s=09" target="_blank" rel="">
+                <FaTwitter className="icon twitter" />
+              </a>
+              <a href="https://discord.com/users/_zaki_s" target="_blank" rel="">
+                <FaDiscord className="icon discord" />
+              </a>
+            </div>
+          </div>
       </div>
       
       <div className="yap">

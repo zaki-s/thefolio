@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import "./Navbar.css"
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
     <motion.div 
-      className="navbar"
+      className={`navbar ${scrolled ? "scrolled" : ""}`}
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -23,7 +31,7 @@ const Navbar = () => {
         <motion.a href="#projects" className="alinks" variants={linkVariant}>
           <span className="roman">02.</span> Education/Experience
         </motion.a>
-        <motion.a href="#contact" className="alinks" variants={linkVariant}>
+        <motion.a href="#projects" className="alinks" variants={linkVariant}>
           <span className="roman">03.</span> Projects
         </motion.a>
         <motion.a href="#contact" className="alinks" variants={linkVariant}>
@@ -43,6 +51,7 @@ const Navbar = () => {
 }
 
 export default Navbar
+
 
 // Animation Variants
 const containerVariants = {

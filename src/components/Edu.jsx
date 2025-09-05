@@ -4,8 +4,8 @@ import "./Edu.css"
 
 const Edu = () => {
   return (
-    <div>
-
+    <div className="educont">
+      
     </div>
   )
 }
