@@ -10,10 +10,18 @@ const Main = () => {
   return (
     <div className="maincont">
         <Navbar />
-        <About />
-        <Proj />
 
-        <Cont />
+        <div id="aboutme">
+          <About />
+        </div>
+
+        <div id="projects">
+          <Proj />
+        </div>
+
+        <div id="contact">
+          <Cont />
+        </div>
     </div>
   )
 }
