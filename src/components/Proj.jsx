@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProjectCard.css";
 import ProjectCard from "./ProjectCard";
 import Tuinue from "../assets/images/tuinue.png"
 import skill from "../assets/images/skill.png"
@@ -7,7 +8,7 @@ import lootbox from "../assets/images/lootbox.png"
 const Proj = () => {
   return (
     <div className="projcont">
-      <h2 className="projhead">Projects I’ve worked...</h2>
+      <h2 className="projhead"><span className="projheadnum">03.</span>Projects I’ve worked/working on...</h2>
 
       <ProjectCard
         image={Tuinue}

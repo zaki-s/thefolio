@@ -7,6 +7,7 @@ const Cont = () => {
   return (
     <div className="contcont">
       <div className="conttext">
+        <h1 className="contintro">04.say hi!!</h1>
         <h1 className="contitle">Get In Touch</h1>
         <p className="coninfo">I'm currently looking for new opportunities</p>
         <p className="coninfo2">Please do get in touch and ill reach back to you as well!</p>
