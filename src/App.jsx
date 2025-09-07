@@ -9,6 +9,7 @@ import Edu from "./components/Edu";
 import Proj from "./components/Proj";
 import Cont from "./components/Cont";
 import TiltedCard from "./components/TiltedCard";
+import ProjectCard from "./components/ProjectCard";
 
 function BootScreenWrapper() {
   const Navigate = useNavigate();
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/p" element={<Proj />} />
         <Route path="/c" element={<Cont />} />
         <Route path="/t" element={<TiltedCard />} />
+        <Route path="/pc" element={<ProjectCard />} />
       </Routes>
     </Router>
   )
