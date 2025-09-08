@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProjectCard.css";
+import "./Proj.css";
 import ProjectCard from "./ProjectCard";
 import Tuinue from "../assets/images/tuinue.png"
 import skill from "../assets/images/skill.png"
