@@ -44,16 +44,16 @@ const Navbar = () => {
 
       {/* Links */}
       <motion.div className="links" variants={linksContainer}>
-        <motion.a href="#aboutme" className="alinks" variants={linkVariant}>
+        <motion.a href="/m#aboutme" className="alinks" variants={linkVariant}>
           <span className="roman">01.</span> About
         </motion.a>
-        <motion.a href="#edu" className="alinks" variants={linkVariant}>
+        <motion.a href="/m#edu" className="alinks" variants={linkVariant}>
           <span className="roman">02.</span> Education/Experience
         </motion.a>
-        <motion.a href="#projects" className="alinks" variants={linkVariant}>
+        <motion.a href="/m#projects" className="alinks" variants={linkVariant}>
           <span className="roman">03.</span> Projects
         </motion.a>
-        <motion.a href="#contact" className="alinks" variants={linkVariant}>
+        <motion.a href="/m#contact" className="alinks" variants={linkVariant}>
           <span className="roman">04.</span> Contact
         </motion.a>
         <motion.a
@@ -73,10 +73,10 @@ const Navbar = () => {
 
       {/* Mobile Links */}
       <motion.div className={`mobile-links ${menuOpen ? 'open' : ''}`}>
-        <a href="#aboutme" onClick={() => setMenuOpen(false)}>About</a>
-        <a href="#edu" onClick={() => setMenuOpen(false)}>Education/Experience</a>
-        <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="/m#aboutme" onClick={() => setMenuOpen(false)}>About</a>
+        <a href="/m#edu" onClick={() => setMenuOpen(false)}>Education/Experience</a>
+        <a href="/m#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+        <a href="/m#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         <a href="/Zaki's Resume.pdf" download="Zaki's Resume.pdf">Resume</a>
       </motion.div>
     </motion.div>
