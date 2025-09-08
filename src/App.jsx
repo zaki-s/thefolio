@@ -1,6 +1,5 @@
-
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import React from 'react'
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import React from "react";
 import BootScreen from "./pages/BootScreen";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
@@ -11,16 +10,17 @@ import Cont from "./components/Cont";
 import TiltedCard from "./components/TiltedCard";
 import ProjectCard from "./components/ProjectCard";
 
+// BootScreenWrapper is defined outside App for cleanliness
 function BootScreenWrapper() {
-  const Navigate = useNavigate();
-  return <BootScreen onFinish={() => Navigate("/m")} />;
+  const navigate = useNavigate();
+  return <BootScreen onFinish={() => navigate("/m")} />;
 }
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<BootScreen />} />
+        <Route path="/" element={<BootScreenWrapper />} />
         <Route path="/nav" element={<Navbar />} />
         <Route path="/m" element={<Main />} />
         <Route path="/a" element={<About />} />
@@ -31,7 +31,7 @@ const App = () => {
         <Route path="/pc" element={<ProjectCard />} />
       </Routes>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

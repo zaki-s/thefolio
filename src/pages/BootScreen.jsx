@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import "./BootScreen.css";
 
 const fakeLogs = [
@@ -47,7 +46,7 @@ function getLogClass(log) {
   return "";
 }
 
-export default function BootScreen() {
+export default function BootScreen({ onFinish }) {
   const [visibleElements, setVisibleElements] = useState([]);
   const [scrollStopped, setScrollStopped] = useState(false);
   const logSet = useRef(new Set());
@@ -55,14 +54,12 @@ export default function BootScreen() {
   const groupCounter = useRef(0);
   const groupSize = useRef(getRandomGroupSize());
 
-  const navigate = useNavigate();
-
   useEffect(() => {
     const interval = setInterval(() => {
       if (index.current >= fakeLogs.length) {
         clearInterval(interval);
         setTimeout(() => {
-          navigate("/m", { replace: true });
+          if (onFinish) onFinish(); // ✅ triggers navigation from wrapper
         }, 2000);
         return;
       }

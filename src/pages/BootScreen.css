@@ -91,6 +91,6 @@ body, html {
 
 @media (max-width: 600px) {
   .log-line {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
 }
