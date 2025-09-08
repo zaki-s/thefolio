@@ -186,3 +186,74 @@
 .social-icons .twitter  { top: 60%; left: 30%; animation-delay: 3s; }
 .social-icons .linkedin { top: 30%; left: 40%; animation-delay: 2s; }
 .social-icons .discord  { top: 50%; left: 50%; animation-delay: 4s; }
+
+@media (max-width: 1200px) {
+  .abtcont, .abtyap {
+    margin: 0 8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .abtcont, .abtyap {
+    margin: 0 4rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .abttext h1 {
+    font-size: 4rem;
+  }
+  .abttext h2 {
+    font-size: 2.5rem;
+  }
+  .abtyap {
+    gap: 3rem;
+  }
+  .abtsocials {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .abtcont, .abtyap {
+    margin: 0 2rem;
+  }
+  .abttext h1 {
+    font-size: 3rem;
+  }
+  .abttext h2 {
+    font-size: 2rem;
+  }
+  .tech-icons .icon {
+    font-size: 2rem;
+  }
+  .social-icons .icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .abtcont, .abtyap {
+    margin: 0 1rem;
+  }
+  .abttext h1 {
+    font-size: 2.5rem;
+  }
+  .abttext h2 {
+    font-size: 1.8rem;
+  }
+  .abtech, .yap {
+    min-height: auto;
+  }
+  .tech-icons, .social-icons {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-left: 0;
+    justify-content: center;
+  }
+  .tech-icons .icon, .social-icons .icon {
+    position: static;
+    animation: none;
+  }
+}

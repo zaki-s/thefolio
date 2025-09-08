@@ -47,7 +47,7 @@ function getLogClass(log) {
   return "";
 }
 
-export default function BootScreen({ onFinish }) {
+export default function BootScreen() {
   const [visibleElements, setVisibleElements] = useState([]);
   const [scrollStopped, setScrollStopped] = useState(false);
   const logSet = useRef(new Set());

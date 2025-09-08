@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,6 +64,20 @@ const Navbar = () => {
         >
           <span className="navbtntxt">Resume</span>
         </motion.a>
+      </motion.div>
+
+      {/* Menu Icon */}
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      {/* Mobile Links */}
+      <motion.div className={`mobile-links ${menuOpen ? 'open' : ''}`}>
+        <a href="#aboutme" onClick={() => setMenuOpen(false)}>About</a>
+        <a href="#edu" onClick={() => setMenuOpen(false)}>Education/Experience</a>
+        <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="/Zaki's Resume.pdf" download="Zaki's Resume.pdf">Resume</a>
       </motion.div>
     </motion.div>
   );

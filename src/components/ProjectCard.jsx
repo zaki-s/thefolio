@@ -1,6 +1,6 @@
 import React from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import "./ProjectCard.css";
+import "./Proj.css";
 
 const ProjectCard = ({ image, title, description, tech, liveLink, repoLink, flipped }) => {
   return (

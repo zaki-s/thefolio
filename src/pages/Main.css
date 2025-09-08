@@ -12,3 +12,10 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  .left-sidebar,
+  .right-sidebar {
+    display: none;
+  }
+}

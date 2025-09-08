@@ -90,3 +90,39 @@
 .navbar.hidden {
   transform: translateY(-100%);
 }
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.mobile-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(15, 23, 42, 0.95);
+  padding: 1rem 0;
+}
+
+.mobile-links a {
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .mobile-links.open {
+    display: flex;
+  }
+}
