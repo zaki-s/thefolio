@@ -8,7 +8,7 @@ const fakeLogs = [
   "CPU topology: 16 cores / 32 threads @ 3.40GHz (Turbo Boost enabled)",
   "Memory allocation: 64,214 MB physical, 8,192 MB swap, 2,048 MB zram",
   "GPU detected: NVIDIA RTX 4080 (Driver v535.98)",
-  "Initializing Vulkan shaders for UI rendering...",
+  "Initializing Vulkan shaders for UI rendering... yeah the GUY must go fr!!",
   "Network stack initialized (IPv4 + IPv6 dual stack)",
   "I have a friend with a HAIRLINE Like VEGETA'S and one with a HAIRLINE shaped like NIKE",
   "Host resolved: github.com → 140.82.112.4 via DNS-over-HTTPS",
