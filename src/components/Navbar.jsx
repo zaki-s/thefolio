@@ -28,7 +28,7 @@ const Navbar = () => {
         <motion.a href="#aboutme" className="alinks" variants={linkVariant}>
           <span className="roman">01.</span> About
         </motion.a>
-        <motion.a href="#projects" className="alinks" variants={linkVariant}>
+        <motion.a href="#edu" className="alinks" variants={linkVariant}>
           <span className="roman">02.</span> Education/Experience
         </motion.a>
         <motion.a href="#projects" className="alinks" variants={linkVariant}>
@@ -38,7 +38,7 @@ const Navbar = () => {
           <span className="roman">04.</span> Contact
         </motion.a>
         <motion.a 
-          href="/resume.pdf" 
+          href="/Zaki's Resume.pdf"
           download="Zaki's Resume.pdf" 
           className="navbtn"
           variants={linkVariant}

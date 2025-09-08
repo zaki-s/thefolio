@@ -33,9 +33,28 @@ const Proj = () => {
         image={lootbox}
         title="Lootbox"
         description="Aweb app that generates random games to the user to help in finding new exciting games to play" 
-        tech={["HTML", "CSS", "API", "JavaScript"]}
+        tech={["HTML", "CSS", "-Public Game API-", "JavaScript"]}
         liveLink="https://zaki-s.github.io/LOOTBOX-gaming/"
         repoLink="https://github.com/zaki-s/LOOTBOX-gaming"
+      />
+
+      <ProjectCard
+        image="https://t3.ftcdn.net/jpg/03/32/17/62/360_F_332176236_o8QFSuv86SjfqWuTa5h6jbt4zHFbbbDG.jpg"
+        title="Thryve"
+        description="A weellness app to help users suffering from diabetes to monitor their body, sugar levels and generally their health. Stores medical history links them with specialists in the field as well and also curates a diet that will help them manage their condition."
+        tech={["React", "Python", " Tailwind CSS", "Flask", "PostgreSQL"]}
+        liveLink=""
+        repoLink=""
+        flipped
+      />
+
+      <ProjectCard
+        image="https://t3.ftcdn.net/jpg/03/32/17/62/360_F_332176236_o8QFSuv86SjfqWuTa5h6jbt4zHFbbbDG.jpg"
+        title="theADVENTURE"
+        description="A more personal project, that will be used to showcase my adventures and short films(i love adventures and have a love of creating short films) It will also be a blog to share my experiences and tips on travelling and filmmaking." 
+        tech={["React", "Tailwind CSS", "Flask", "PostgreSQL", "Python"]}
+        liveLink=""
+        repoLink=""
       />
     </div>
   );
