@@ -82,3 +82,11 @@
     color: #ffffff;
     transition: 0.3s;
 }
+
+.navbar.visible {
+  transform: translateY(0);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}

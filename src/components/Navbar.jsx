@@ -1,19 +1,36 @@
-import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import "./Navbar.css"
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import './Navbar.css';
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false)
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show/hide based on scroll direction
+      if (currentScrollY > lastScrollY) {
+        setShowNavbar(false); // scrolling down
+      } else if (currentScrollY < lastScrollY) {
+        setShowNavbar(true); // scrolling up
+      }
+
+      // Blur effect trigger
+      setScrolled(currentScrollY > 50);
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <motion.div 
-      className={`navbar ${scrolled ? "scrolled" : ""}`}
+    <motion.div
+      className={`navbar ${showNavbar ? 'visible' : 'hidden'} ${scrolled ? 'scrolled' : ''}`}
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -37,9 +54,9 @@ const Navbar = () => {
         <motion.a href="#contact" className="alinks" variants={linkVariant}>
           <span className="roman">04.</span> Contact
         </motion.a>
-        <motion.a 
+        <motion.a
           href="/Zaki's Resume.pdf"
-          download="Zaki's Resume.pdf" 
+          download="Zaki's Resume.pdf"
           className="navbtn"
           variants={linkVariant}
         >
@@ -47,11 +64,10 @@ const Navbar = () => {
         </motion.a>
       </motion.div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Navbar
-
+export default Navbar;
 
 // Animation Variants
 const containerVariants = {
@@ -60,25 +76,33 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.15,
-    }
-  }
-}
+    },
+  },
+};
 
 const titleVariant = {
   hidden: { x: -60, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }
-}
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: 'easeOut' },
+  },
+};
 
 const linksContainer = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2
-    }
-  }
-}
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const linkVariant = {
   hidden: { x: -40, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } }
-}
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.6, ease: 'easeOut' },
+  },
+};
