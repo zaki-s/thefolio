@@ -32,9 +32,7 @@ const About = () => {
             <h3>Hi, my name is</h3><br></br>
             <h1>Zaki James.</h1><br></br>
             <h2>I love creating stuff!!</h2>
-            <p>I am a full stack software engineer who loves building</p>
-            <p>and creating digital experiences. I also love the whole essence</p>
-            <p>of creating, in any aspect! And i love comics and cars!!</p>
+            <p>I am a full stack software engineer who loves building and creating digital experiences. I also love the whole essence of creating, in any aspect! And i love comics, anime and cars!!</p>
         </div>
         <TiltedCard
             imageSrc={the1}
