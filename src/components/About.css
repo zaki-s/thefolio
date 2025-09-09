@@ -231,8 +231,6 @@
   }
 }
 
-/* Existing styles remain the same until the media queries */
-
 @media (max-width: 576px) {
   .abtcont, .abtyap {
     margin: 0 1rem;
@@ -246,86 +244,19 @@
   .abtech, .yap {
     min-height: auto;
   }
-  
-  /* Modified mobile styles for tech icons */
-  .tech-icons {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin: 2rem 0;
-    height: auto;
-    min-height: 300px;
-  }
-  
-  .tech-icons .icon {
-    position: relative;
-    font-size: 1.8rem;
-    animation: floatChaosMobile 12s infinite ease-in-out;
-    margin: 0 auto;
+  .tech-icons, .social-icons {
+    position: static;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-  }
-  
-  /* Modified mobile styles for social icons */
-  .social-icons {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin: 2rem 0;
-    height: auto;
-    min-height: 150px;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-left: 0;
-  }
-  
-  .social-icons .icon {
-    position: relative;
-    font-size: 1.8rem;
-    animation: floatChaosMobile 10s infinite ease-in-out;
-    margin: 0 auto;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
   }
-  
-  /* Remove all the absolute positioning classes for mobile */
-  .tech-icons .icon,
-  .social-icons .icon {
-    top: auto !important;
-    left: auto !important;
-    position: relative;
+  .tech-icons .icon, .social-icons .icon {
+    position: static;
+    animation: none;
   }
-  
-  /* Custom floating animation for mobile with varied timing */
-  @keyframes floatChaosMobile {
-    0%   { transform: translate(0, 0) rotate(0deg); }
-    25%  { transform: translate(0, -8px) rotate(3deg); }
-    50%  { transform: translate(0, 5px) rotate(-3deg); }
-    75%  { transform: translate(0, -5px) rotate(2deg); }
-    100% { transform: translate(0, 0) rotate(0deg); }
-  }
-  
-  /* Add varied animation delays for a more random feel */
-  .tech-icons .icon:nth-child(1) { animation-delay: 0s; }
-  .tech-icons .icon:nth-child(2) { animation-delay: 1.2s; }
-  .tech-icons .icon:nth-child(3) { animation-delay: 2.4s; }
-  .tech-icons .icon:nth-child(4) { animation-delay: 3.6s; }
-  .tech-icons .icon:nth-child(5) { animation-delay: 4.8s; }
-  .tech-icons .icon:nth-child(6) { animation-delay: 6s; }
-  .tech-icons .icon:nth-child(7) { animation-delay: 7.2s; }
-  .tech-icons .icon:nth-child(8) { animation-delay: 8.4s; }
-  .tech-icons .icon:nth-child(9) { animation-delay: 9.6s; }
-  .tech-icons .icon:nth-child(10) { animation-delay: 10.8s; }
-  
-  .social-icons .icon:nth-child(1) { animation-delay: 0s; }
-  .social-icons .icon:nth-child(2) { animation-delay: 1.5s; }
-  .social-icons .icon:nth-child(3) { animation-delay: 3s; }
-  .social-icons .icon:nth-child(4) { animation-delay: 4.5s; }
-  .social-icons .icon:nth-child(5) { animation-delay: 6s; }
 }
+
+
+/*icons on smaller screens!!!*/
