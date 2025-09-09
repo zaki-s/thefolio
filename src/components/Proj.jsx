@@ -13,7 +13,7 @@ const Proj = () => {
       <ProjectCard
         image={Tuinue}
         title="Tuinue Wasichana"
-        description="Tuinue wasichana was built to help young girls get the support they need to become better versions of themselves. It was a collaborative project." 
+        description="Tuinue Wasichana was built to empower young girls by providing the support and resources they need to grow into the best versions of themselves. This was a collaborative project where I worked closely with a team to design, develop, and deliver a meaningful solution with real social impact." 
         tech={["React", "CSS", "Python", "Flask", "PostgreSQL"]}
         liveLink=""
         repoLink="https://github.com/moses-25/Tuinue-wasichana"
@@ -22,9 +22,9 @@ const Proj = () => {
       <ProjectCard
         image={skill}
         title="Skill Forge"
-        description="A web app to learn new skills and track the skills learnt  over time. Built with a focus on user experience and interactivity."
+        description="A web application designed to help users discover new skills and track their learning progress over time. Built with a strong emphasis on user experience, interactivity, and a clean, intuitive interface to keep learning both engaging and accessible."
         tech={["React", "Python", "CSS", "Flask", "PostgreSQL"]}
-        liveLink="https://spotify-live.com"
+        liveLink=""
         repoLink="https://github.com/zaki-s/SF-PHASE4-FE"
         flipped
       />
@@ -41,7 +41,7 @@ const Proj = () => {
       <ProjectCard
         image="https://t3.ftcdn.net/jpg/03/32/17/62/360_F_332176236_o8QFSuv86SjfqWuTa5h6jbt4zHFbbbDG.jpg"
         title="Thryve"
-        description="A weellness app to help users suffering from diabetes to monitor their body, sugar levels and generally their health. Stores medical history links them with specialists in the field as well and also curates a diet that will help them manage their condition."
+        description="A wellness app designed to support individuals living with diabetes by helping them monitor their health, track sugar levels, and manage their overall well-being. The app securely stores medical history, connects users with specialists, and curates personalized diet plans to make condition management easier and more effective."
         tech={["React", "Python", " Tailwind CSS", "Flask", "PostgreSQL"]}
         liveLink=""
         repoLink=""
@@ -51,7 +51,7 @@ const Proj = () => {
       <ProjectCard
         image="https://t3.ftcdn.net/jpg/03/32/17/62/360_F_332176236_o8QFSuv86SjfqWuTa5h6jbt4zHFbbbDG.jpg"
         title="theADVENTURE"
-        description="A more personal project, that will be used to showcase my adventures and short films(i love adventures and have a love of creating short films) It will also be a blog to share my experiences and tips on travelling and filmmaking." 
+        description="A personal passion project that brings together my love for adventure and filmmaking. This platform will showcase my travels and short films while doubling as a blog where I share stories, behind-the-scenes insights, and tips on exploring the world and capturing it through film. It’s more than just a portfolio piece—it’s a creative space where my journey as a traveler and storyteller comes to life." 
         tech={["React", "Tailwind CSS", "Flask", "PostgreSQL", "Python"]}
         liveLink=""
         repoLink=""
