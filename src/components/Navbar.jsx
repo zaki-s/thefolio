@@ -57,9 +57,10 @@ const Navbar = () => {
           <span className="roman">04.</span> Contact
         </motion.a>
         <motion.a
-          href="/Zaki's Resume.pdf"
-          download="Zaki's Resume.pdf"
+          href="/resume.pdf"
           className="navbtn"
+          rel="noopener noreferrer"
+          target="_blank"
           variants={linkVariant}
         >
           <span className="navbtntxt">Resume</span>
