@@ -78,7 +78,7 @@ const Navbar = () => {
         <a href="/m#edu" onClick={() => setMenuOpen(false)}>Education/Experience</a>
         <a href="/m#projects" onClick={() => setMenuOpen(false)}>Projects</a>
         <a href="/m#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-        <a href="/Zaki's Resume.pdf" download="Zaki's Resume.pdf">Resume</a>
+        <a href="/folio.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </motion.div>
     </motion.div>
   );
