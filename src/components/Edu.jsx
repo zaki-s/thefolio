@@ -47,9 +47,9 @@ const Edu = () => {
             <h3>Experience</h3>
             <ul>
               <li>
-                <h4>2025 October - Present</h4>
+                <h4>2025</h4>
                 <p className="edusectitle"><a className="area" href="https://kutima-software.com/" target="/blank">Kutima Software Solutions</a></p>
-                <p className="role">QA Engineer (Intern)</p>
+                <p className="role">QA Engineer</p>
                 <p className="edusectyap">In Kutima, i'm venturing more into the testing of systems and softwares to ensure the proper and smooth running before customer consumption. I'm also learning so much more from my superior Engineers and it just shows how much more you can do with tech!! Quite an exciting journey i must say!!</p>
               </li>
               <li>
