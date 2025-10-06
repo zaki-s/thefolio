@@ -47,6 +47,12 @@ const Edu = () => {
             <h3>Experience</h3>
             <ul>
               <li>
+                <h4>2025 October - Present</h4>
+                <p className="edusectitle">Kutima Software Solutions</p>
+                <p className="role">QA Engineer (Intern)</p>
+                <p className="edusectyap">#####</p>
+              </li>
+              <li>
                 <h4>2023 June - 2024 March</h4>
                 <p className="edusectitle">Commercial Agribusiness</p>
                 <p className="role">Lead Supervisor (Personall Business)</p>
