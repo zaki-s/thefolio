@@ -57,7 +57,7 @@ const Navbar = () => {
           <span className="roman">04.</span> Contact
         </motion.a>
         <motion.a
-          href="/folio1.pdf"
+          href="/folio2.pdf"
           className="navbtn"
           rel="noopener noreferrer"
           target="_blank"
@@ -78,7 +78,7 @@ const Navbar = () => {
         <a href="/m#edu" onClick={() => setMenuOpen(false)}>Education/Experience</a>
         <a href="/m#projects" onClick={() => setMenuOpen(false)}>Projects</a>
         <a href="/m#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-        <a href="/folio1.pdf" 
+        <a href="/folio2.pdf" 
            target="_blank" 
            rel="noopener noreferrer">
         Resume
