@@ -47,7 +47,13 @@ const Edu = () => {
             <h3>Experience</h3>
             <ul>
               <li>
-                <h4>2025</h4>
+                <h4>2026 February - Present</h4>
+                <p className="edusectitle"><a className="area" href="https://dd.africa/" target="/blank">Development Dynamics</a></p>
+                <p className="role">Products & Data Analyst</p>
+                <p className="edusectyap">In Development-Dynamics i'll be the bridging the gap between Data pipelines and Products, utilising my Front-end developing skills to refine web apps while utilising my Back-end skills for Data collection, sifting and analysing, providing dupport to the firm at large in making a difference in the long run!!</p>
+              </li>
+              <li>
+                <h4>2025 October - Present</h4>
                 <p className="edusectitle"><a className="area" href="https://kutima-software.com/" target="/blank">Kutima Software Solutions</a></p>
                 <p className="role">QA Engineer</p>
                 <p className="edusectyap">In Kutima, i'm venturing more into the testing of systems and softwares to ensure the proper and smooth running before customer consumption. I'm also learning so much more from my superior Engineers and it just shows how much more you can do with tech!! Quite an exciting journey i must say!!</p>
