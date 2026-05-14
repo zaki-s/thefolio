@@ -50,11 +50,14 @@ const Navbar = () => {
         <motion.a href="/m#edu" className="alinks" variants={linkVariant}>
           <span className="roman">02.</span> Education/Experience
         </motion.a>
+        <motion.a href="/m#edu" className="alinks" variants={linkVariant}>
+          <span className="roman">03.</span> Tales
+        </motion.a>
         <motion.a href="/m#projects" className="alinks" variants={linkVariant}>
-          <span className="roman">03.</span> Projects
+          <span className="roman">04.</span> Projects
         </motion.a>
         <motion.a href="/m#contact" className="alinks" variants={linkVariant}>
-          <span className="roman">04.</span> Contact
+          <span className="roman">05.</span> Contact
         </motion.a>
         <motion.a
           href="/folio2.pdf"
@@ -76,6 +79,7 @@ const Navbar = () => {
       <motion.div className={`mobile-links ${menuOpen ? 'open' : ''}`}>
         <a href="/m#aboutme" onClick={() => setMenuOpen(false)}>About</a>
         <a href="/m#edu" onClick={() => setMenuOpen(false)}>Education/Experience</a>
+        <a href="/m#edu" onClick={() => setMenuOpen(false)}>Tales</a>
         <a href="/m#projects" onClick={() => setMenuOpen(false)}>Projects</a>
         <a href="/m#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         <a href="/folio2.pdf" 
