@@ -50,7 +50,7 @@ const Edu = () => {
                 <h4>2026 February - Present</h4>
                 <p className="edusectitle"><a className="area" href="https://dd.africa/" target="/blank">Development Dynamics</a></p>
                 <p className="role">Products & Data Analyst</p>
-                <p className="edusectyap">In Development-Dynamics i'm bridging the gap between products and data and coupling that with a dash of storytelling. </p>
+                <p className="edusectyap">In Development-Dynamics i'm bridging the gap between products and data and coupling that with a dash of storytelling. I also offer support ensuring that the task is complete and efficient.</p>
               </li>
               <li>
                 <h4>2025 October - 2026 April</h4>
