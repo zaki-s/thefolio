@@ -50,13 +50,13 @@ const Edu = () => {
                 <h4>2026 February - Present</h4>
                 <p className="edusectitle"><a className="area" href="https://dd.africa/" target="/blank">Development Dynamics</a></p>
                 <p className="role">Products & Data Analyst</p>
-                <p className="edusectyap">In Development-Dynamics i'll be the bridging the gap between Data pipelines and Products, utilising my Front-end developing skills to refine web apps while utilising my Back-end skills for Data collection, sifting and analysing, providing dupport to the firm at large in making a difference in the long run!!</p>
+                <p className="edusectyap">In Development-Dynamics i'm bridging the gap between products and data and coupling that with a dash of storytelling. </p>
               </li>
               <li>
-                <h4>2025 October - Present</h4>
+                <h4>2025 October - 2026 April</h4>
                 <p className="edusectitle"><a className="area" href="https://kutima-software.com/" target="/blank">Kutima Software Solutions</a></p>
                 <p className="role">QA Engineer</p>
-                <p className="edusectyap">In Kutima, i'm venturing more into the testing of systems and softwares to ensure the proper and smooth running before customer consumption. I'm also learning so much more from my superior Engineers and it just shows how much more you can do with tech!! Quite an exciting journey i must say!!</p>
+                <p className="edusectyap">In Kutima, I was responsible for the assurity of quality in systems, using technologies like Python to write scripts that were ran for quality checks ensuring a smooth user experience when the tested system was launched. I also worked with a team, bolstering my teamwork capabilities. Imust say that was quite the exoerience I had.</p>
               </li>
               <li>
                 <h4>2023 June - 2024 March</h4>
