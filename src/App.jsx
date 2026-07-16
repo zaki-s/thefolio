@@ -9,6 +9,7 @@ import Proj from "./components/Proj";
 import Cont from "./components/Cont";
 import TiltedCard from "./components/TiltedCard";
 import ProjectCard from "./components/ProjectCard";
+import Tales from "./components/Tales";
 
 // BootScreenWrapper is defined outside App for cleanliness
 function BootScreenWrapper() {
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/c" element={<Cont />} />
         <Route path="/t" element={<TiltedCard />} />
         <Route path="/pc" element={<ProjectCard />} />
+        <Route path="/tl" element={<Tales />} />
       </Routes>
     </Router>
   );
